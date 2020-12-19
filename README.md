@@ -7,5 +7,5 @@ Mineceit's Practice plugin. Reborn and rewritten in Java for both 'Minecraft: Ja
 - You must state your changes to the source code (if any)
 
 ## LICENSE (not a legal license though)
-- (optinal) If you do make changes, please create a pull request to this repo (unless its something like changing the server name)
-- (optinal) Please do give credit to this repo if you do decide to use this for comercial usage.
+- (optional) If you do make changes, please create a pull request to this repo (unless its something like changing the server name)
+- (optional) Please do give credit to this repo if you do decide to use this for comercial usage.
