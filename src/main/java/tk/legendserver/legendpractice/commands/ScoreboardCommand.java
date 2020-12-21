@@ -1,16 +1,13 @@
 package tk.legendserver.legendpractice.commands;
 
 import org.bukkit.ChatColor;
-import org.bukkit.Color;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import tk.legendserver.legendpractice.LegendPractice;
-import tk.legendserver.legendpractice.player.BedrockPlayer;
 import tk.legendserver.legendpractice.player.LegendPlayer;
 import tk.legendserver.legendpractice.player.interfaces.ILegendPlayer;
 import tk.legendserver.legendpractice.scoreboards.FFAScoreboard;
 import tk.legendserver.legendpractice.scoreboards.LobbyScoreboard;
-import tk.legendserver.legendpractice.utils.Util;
 import tk.legendserver.legendpractice.utils.commandhandler.BaseCommand;
 
 public final class ScoreboardCommand extends BaseCommand

@@ -5,7 +5,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import tk.legendserver.legendpractice.scoreboards.LobbyScoreboard;
-import tk.legendserver.legendpractice.utils.Util;
 
 public final class ScoreboardListener implements Listener
 {

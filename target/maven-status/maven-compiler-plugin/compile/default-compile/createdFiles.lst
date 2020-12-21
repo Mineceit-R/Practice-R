@@ -1,5 +1,3 @@
-tk\legendserver\legendpractice\utils\LobbyItemsUtil.class
-tk\legendserver\legendpractice\gui\FFAGUI.class
 tk\legendserver\legendpractice\utils\SimpleInventory.class
 tk\legendserver\legendpractice\gui\DuelsGUI.class
 tk\legendserver\legendpractice\listeners\PracticeListener.class

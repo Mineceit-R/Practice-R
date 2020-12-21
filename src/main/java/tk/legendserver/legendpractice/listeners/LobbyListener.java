@@ -2,14 +2,11 @@ package tk.legendserver.legendpractice.listeners;
 
 import fr.minuskube.netherboard.Netherboard;
 import org.bukkit.*;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
-import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -23,8 +20,6 @@ import tk.legendserver.legendpractice.player.interfaces.ILegendPlayer;
 import tk.legendserver.legendpractice.scoreboards.LobbyScoreboard;
 import tk.legendserver.legendpractice.utils.LobbyItemsUtil;
 import tk.legendserver.legendpractice.utils.Util;
-
-import java.util.Collection;
 
 public final class LobbyListener implements Listener
 {

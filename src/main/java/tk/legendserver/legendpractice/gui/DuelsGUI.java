@@ -12,13 +12,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import tk.legendserver.legendpractice.LegendPractice;
-import tk.legendserver.legendpractice.player.LegendPlayer;
-import tk.legendserver.legendpractice.player.interfaces.ILegendPlayer;
-import tk.legendserver.legendpractice.scoreboards.FFAScoreboard;
-import tk.legendserver.legendpractice.utils.KitsUtil;
-import tk.legendserver.legendpractice.utils.Util;
-
-import java.util.Objects;
 
 public final class DuelsGUI implements InventoryProvider
 {

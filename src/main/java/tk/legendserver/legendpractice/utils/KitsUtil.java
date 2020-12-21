@@ -1,10 +1,7 @@
 package tk.legendserver.legendpractice.utils;
 
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import tk.legendserver.legendpractice.kits.ComboKit;
-import tk.legendserver.legendpractice.kits.GappleKit;
 import tk.legendserver.legendpractice.utils.kits.BaseKit;
 
 import java.util.HashMap;
@@ -36,8 +33,6 @@ public final class KitsUtil
     {
         BaseKit kit = registeredKits.get(kitTag);
         kit.sendKit(player);
-
-        String kitName = kit.getName();
     }
 
     public static void put(Player player, ItemStack item, String slotName)

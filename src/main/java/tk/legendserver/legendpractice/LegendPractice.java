@@ -2,7 +2,6 @@ package tk.legendserver.legendpractice;
 
 import fr.minuskube.inv.InventoryManager;
 import me.realized.duels.api.Duels;
-import me.realized.duels.api.queue.DQueue;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.event.Listener;

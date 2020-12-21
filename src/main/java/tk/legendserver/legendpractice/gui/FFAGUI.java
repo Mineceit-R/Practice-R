@@ -51,6 +51,14 @@ public final class FFAGUI implements InventoryProvider
         contents.set(1, 2, ClickableItem.of(gapple,
                 e -> teleport("arena.gapple", player)));
 
+                ItemStack combo = new ItemStack(Material.RAW_FISH, 3);
+                ItemMeta comboMeta = combo.getItemMeta();
+                gappleMeta.setDisplayName(ChatColor.YELLOW + "Combo");
+                gapple.setItemMeta(comboMeta);
+        
+                contents.set(1, 2, ClickableItem.of(combo,
+                        e -> teleport("arena.combo", player)));
+
     }
 
     @Override
@@ -63,43 +71,41 @@ public final class FFAGUI implements InventoryProvider
     {
         ILegendPlayer lPlayer = LegendPractice.getInstance().getPlayerManager().getPlayer(player);
 
+        String mode = "";
+        String modeA = ""; // Just the capital version of "mode"
+        
         switch(validArena)
         {
             default:
-                return;
-            case "arena.nodebuff":
-                KitsUtil.sendKit(player, KitsUtil.NODEBUFF);
-
-                if(Bukkit.getWorld("NoDebuff") == null)
-                {
-                    new WorldCreator("NoDebuff").createWorld();
-                }
-
-                player.teleport(new Location(Bukkit.getWorld("NoDebuff"), 222, 146, 357));
-                Util.castMessage(player, ChatColor.GREEN + "Loaded 'NoDebuff' kit. Good Luck!");
-
-                lPlayer.setScoreboardType(LegendPlayer.FFA_SCOREBOARD);
-                new FFAScoreboard(lPlayer.getBukkitPlayer());
-
-                player.setGameMode(GameMode.ADVENTURE);
-                break;
             case "arena.gapple":
-                KitsUtil.sendKit(player, KitsUtil.GAPPLE);
-
-                if(Bukkit.getWorld("Gapple") == null)
-                {
-                    new WorldCreator("Gapple").createWorld();
-                }
-
-                player.teleport(new Location(Bukkit.getWorld("Gapple"), 225, 51, 255));
-                Util.castMessage(player, ChatColor.GREEN + "Loaded 'Gapple' kit. Good Luck!");
-
-                lPlayer.setScoreboardType(LegendPlayer.FFA_SCOREBOARD);
-                new FFAScoreboard(lPlayer.getBukkitPlayer());
-
-                player.setGameMode(GameMode.ADVENTURE);
+            	mode = "gapple";
+            	modeA = "Gapple";
+                break;
+            case "arena.nodebuff":
+            	mode = "nodebuff";
+            	modeA = "NoDebuff";
+                break;
+            case "arena.combo":
+            	mode = "combo";
+            	modeA = "Combo";
                 break;
         }
+        
+        KitsUtil.sendKit(player, "kits." + mode);
+
+        if(Bukkit.getWorld(modeA) == null)
+        {
+            new WorldCreator(modeA).createWorld();
+        }
+
+        player.teleport(new Location(Bukkit.getWorld(modeA), 0, 51, 0));
+        Util.castMessage(player, ChatColor.GREEN + "Loaded '" + modeA + "' kit. Good Luck!");
+
+        lPlayer.setScoreboardType(LegendPlayer.FFA_SCOREBOARD);
+        new FFAScoreboard(lPlayer.getBukkitPlayer());
+
+        player.setGameMode(GameMode.ADVENTURE);
+        
     }
 
 }
